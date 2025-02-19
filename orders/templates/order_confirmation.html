@@ -1,0 +1,11 @@
+<h1>Order Confirmation</h1>
+
+<p><strong>Order ID:</strong> {{ order.id }}</p>
+<p><strong>Delivery Address:</strong> {{ order.adresse_livraison }}</p>
+<p><strong>Status:</strong> {{ order.statut }}</p>
+<p><strong>Total Price:</strong> {{ order.total_price }}</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Confirm Order</button>
+</form>
